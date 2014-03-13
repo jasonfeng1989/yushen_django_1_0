@@ -1,0 +1,9 @@
+{% if parts_list %}
+    <ul>
+    {% for each_part in parts_list %}
+        <li><a href="{% url 'yushen:detail' each_part.id %}">{{ each_part.identifier }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
